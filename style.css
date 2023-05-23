@@ -1,0 +1,142 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.main-title .title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+}
+.container .left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(241, 81%, 54%);
+  border-radius: 30px;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.container .left-side .title {
+  color: hsl(241, 100%, 89%);
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+.container .left-side .score-wrapper {
+  background-color: hsl(256, 72%, 46%);
+  padding: 50px 70px;
+  border-radius: 108px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .left-side .score-wrapper .score {
+  color: hsl(0, 0%, 100%);
+  font-size: 50px;
+}
+.container .left-side .score-wrapper .score2 {
+  color: hsl(241, 100%, 89%);
+}
+.container .left-side .evaluation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container .left-side .evaluation-wrapper .evaluation {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0;
+  font-size: xx-large;
+}
+.container .left-side .evaluation-wrapper .evaluation-summary {
+  color: hsl(0, 0%, 100%);
+  max-width: 53%;
+  font-size: 18px;
+  text-align: center;
+}
+.container .right-side {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+}
+.container .right-side .title-wrapper {
+  width: 70%;
+}
+.container .right-side .user-score-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+}
+.container .right-side .user-score-wrapper .skill-wrapper {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  width: 70%;
+  justify-content: space-between;
+  padding: 5px 25px;
+  border-radius: 15px;
+}
+.container .right-side .user-score-wrapper .skill-wrapper .skill-score-max {
+  color: gray;
+}
+.container .right-side .user-score-wrapper .red {
+  background-color: hsla(0, 100%, 67%, 0.2);
+}
+.container .right-side .user-score-wrapper .red .skill-title {
+  color: hsl(0, 100%, 67%);
+}
+.container .right-side .user-score-wrapper .yellow {
+  background-color: hsla(39, 100%, 56%, 0.2);
+}
+.container .right-side .user-score-wrapper .yellow .skill-title {
+  color: hsl(39, 100%, 56%);
+}
+.container .right-side .user-score-wrapper .green {
+  background-color: hsla(166, 100%, 37%, 0.2);
+}
+.container .right-side .user-score-wrapper .green .skill-title {
+  color: hsl(166, 100%, 37%);
+}
+.container .right-side .user-score-wrapper .blue {
+  background-color: hsla(234, 85%, 45%, 0.2);
+}
+.container .right-side .user-score-wrapper .blue .skill-title {
+  color: hsl(234, 85%, 45%);
+}
+.container .right-side .user-score-wrapper .continue-btn {
+  width: 70%;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  background-color: hsl(224, 30%, 27%);
+  margin-top: 30px;
+}
+.container .right-side .user-score-wrapper .continue-btn:hover {
+  cursor: pointer;
+  background-color: hsl(256, 72%, 46%);
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */

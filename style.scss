@@ -1,0 +1,189 @@
+$bg-red: hsla(0, 100%, 67%, 0.2);
+$Red: hsla(0, 100%, 67%);
+$Orangey-bg: hsla(39, 100%, 56%, 0.2);
+$Orangey: hsla(39, 100%, 56%);
+$Green-bg: hsl(166, 100%, 37%, 0.2);
+$Green: hsl(166, 100%, 37%);
+$Cobalt-blue-bg: hsl(234, 85%, 45%, 0.2);
+$Cobalt-blue: hsl(234, 85%, 45%);
+// gradient
+$Background-blue: hsl(252, 100%, 67%);
+$Background-light-blue: hsl(241, 81%, 54%);
+$circle-violet: hsla(256, 72%, 46%, 1);
+$circle-persian: hsla(241, 72%, 46%, 0);
+// neutral
+$White: hsl(0, 0%, 100%);
+$Pale-blue: hsl(221, 100%, 96%);
+$Light-lavender: hsl(241, 100%, 89%);
+$Dark-gray-blue: hsl(224, 30%, 27%);
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.main-title {
+    .title {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+
+    .left-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $Background-light-blue;
+        border-radius: 30px;
+        justify-content: space-between;
+        padding-bottom: 50px;
+
+        .title {
+            color: $Light-lavender;
+            margin-top: 50px;
+            margin-bottom: 0;
+        }
+
+        .score-wrapper {
+            background-color: $circle-violet;
+            padding: 50px 70px;
+            border-radius: 108px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .score {
+                color: $White;
+                font-size: 50px;
+            }
+
+            .score2 {
+                color: $Light-lavender;
+            }
+        }
+
+        .evaluation-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .evaluation {
+                color: $White;
+                margin-bottom: 0;
+                font-size: xx-large;
+            }
+
+            .evaluation-summary {
+                color: $White;
+                max-width: 53%;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .right-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+
+        .title-wrapper {
+            width: 70%;
+        }
+
+        .user-score-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 15px;
+
+            .skill-wrapper {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                width: 70%;
+                justify-content: space-between;
+                padding: 5px 25px;
+                border-radius: 15px;
+
+                .skill-score-max {
+                    color: gray;
+                }
+            }
+
+            .red {
+                background-color: $bg-red;
+
+                .skill-title {
+                    color: $Red;
+                }
+            }
+
+            .yellow {
+                background-color: $Orangey-bg;
+
+                .skill-title {
+                    color: $Orangey;
+                }
+            }
+
+            .green {
+                background-color: $Green-bg;
+
+                .skill-title {
+                    color: $Green;
+                }
+            }
+
+            .blue {
+                background-color: $Cobalt-blue-bg;
+
+                .skill-title {
+                    color: $Cobalt-blue;
+                }
+            }
+
+            .continue-btn {
+                width: 70%;
+                padding: 15px 30px;
+                border-radius: 30px;
+                border: none;
+                color: white;
+                font-size: 20px;
+                background-color: $Dark-gray-blue;
+                margin-top: 30px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $circle-violet;
+                }
+            }
+        }
+
+    }
+}
+
+@media(max-width: 500px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+}
